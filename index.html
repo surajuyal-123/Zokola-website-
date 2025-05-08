@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Zokola - Smart Super App</title>
+</head>
+<body>
+  <header>
+    <h1>Zokola</h1>
+    <p>Smart Local + Super App</p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="item">🏬 Mall</div>
+      <div class="item">💇‍♀️ Beauty</div>
+      <div class="item">🛠️ Mechanic</div>
+      <div class="item">🧑‍🏫 Courses</div>
+      <div class="item">🧘 Ayurveda</div>
+      <div class="item">🏠 Property</div>
+      <div class="item">🧵 Tailor</div>
+      <div class="item">🏦 Bank</div>
+      <div class="item">🎫 Tickets</div>
+      <div class="item">🍲 Food</div>
+      <div class="item">🧘‍♂️ Gym</div>
+      <div class="item">🔮 Jyotish</div>
+      <div class="item">🧠 AI Tools</div>
+      <div class="item">🧑‍🌾 Farmers</div>
+      <div class="item">🔧 Technician</div>
+      <div class="item">👔 Jobs</div>
+      <div class="item">🛏️ PG/Stay</div>
+      <div class="item">🎥 Reels</div>
+      <div class="item">📞 Emergency</div>
+      <div class="item">🎮 Games</div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(() => {
+        console.log('Service Worker Registered');
+      });
+    }
+  </script>
+</body>
+</html>

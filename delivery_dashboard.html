@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css"/><title>Delivery Dashboard</title></head><body>
+  <header><h2>Hello, <span id="dboy"></span></h2></header><main>
+  <section><h3>Orders</h3><ul><li>Order A – Pending</li></ul><button onclick="start()">Start Delivery</button></section>
+  <section><h3>Rewards</h3><p>₹100</p></section><button onclick="logout()">Logout</button></main>
+  <script>document.getElementById('dboy').innerText = localStorage.dboy||''; function start(){ alert('Delivery started'); } function logout(){ localStorage.clear(); location='delivery_register.html'; }</script>
+</body></html>

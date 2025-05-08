@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+header {
+  padding: 1rem;
+  background: #4CAF50;
+  color: white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+}

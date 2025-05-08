@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Retailer Login - Zokola</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Retailer Login</h2>
+    <input type="text" placeholder="Shop Name" id="shopName" />
+    <input type="text" placeholder="Owner Name" id="ownerName" />
+    <input type="text" placeholder="Location" id="location" />
+    <button onclick="login()">Login</button>
+  </div>
+  <script>
+    function login() {
+      localStorage.setItem("shopName", document.getElementById("shopName").value);
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

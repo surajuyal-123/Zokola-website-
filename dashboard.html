@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Retailer Dashboard - Zokola</title>
+</head>
+<body>
+  <header>
+    <h2>Welcome to Zokola Retailer Panel</h2>
+    <p id="welcome"></p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h3>Add Product</h3>
+        <input type="text" id="pname" placeholder="Product Name" />
+        <input type="text" id="price" placeholder="Price" />
+        <input type="text" id="category" placeholder="Category" />
+        <button onclick="addProduct()">Add</button>
+      </div>
+      <div class="card">
+        <h3>Product List</h3>
+        <ul id="productList"></ul>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p>Coming Soon...</p>
+      </div>
+    </div>
+    <button onclick="logout()">Logout</button>
+  </main>
+  <script>
+    const shopName = localStorage.getItem("shopName");
+    document.getElementById("welcome").innerText = "Shop: " + shopName;
+
+    function addProduct() {
+      const pname = document.getElementById("pname").value;
+      const price = document.getElementById("price").value;
+      const cat = document.getElementById("category").value;
+      const item = `${pname} - ₹${price} (${cat})`;
+      const li = document.createElement("li");
+      li.textContent = item;
+      document.getElementById("productList").appendChild(li);
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
